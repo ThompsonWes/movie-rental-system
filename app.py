@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# this is a comment
 
 @app.route('/')
 def home():
