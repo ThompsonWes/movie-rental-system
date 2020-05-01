@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="static/stylesheets/styles.css">
+  <script defer src="static/JS/Login.js"></script>
+
+</head>
+
+<body>
+
+    <!--Main container to center everything-->
+    <main id="main_holder">
+
+        <!--Header-->
+        <h1 id="login_header">Login</h1>
+        
+        <!--Error message container-->
+        <div id="login_error_msg_container">
+
+            <!--Displays error message for incorrect username/password-->
+          <p id="login_error_msg">Invalid username <span id="error_msg_second_line">and/or password</span></p>
+
+        </div> <!--End error msg container-->
+        
+        <!--Start of Login form-->
+        <form id="login_form">
+
+          <!--Username Container-->
+          <input type="text" name="username" id="username_field" class="login_form_field" placeholder="Username">
+
+          <!--Password container-->
+          <input type="password" name="password" id="password_field" class="login_form_field" placeholder="Password">
+
+          <!--Submit button-->
+          <input type="submit" value="Login" id="login_form_submit">
+        </form>
+      
+      </main> <!--End main container-->
+</body>
+
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <title>login</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <h1>Login</h1>-->
+<!--    <button type="button" onclick="sendRequest()">Submit</button>-->
+<!--    <script>-->
+<!--      function sendRequest() {-->
+<!--        const Http = new XMLHttpRequest();-->
+<!--        Http.open("POST", "http://127.0.0.1:3200/login", true);-->
+<!--        Http.setRequestHeader('Content-Type', 'application/json');-->
+<!--        Http.send(JSON.stringify({-->
+<!--          "username": "john",-->
+<!--          "password": "password"-->
+<!--        }));-->
+
+<!--        Http.onload = function() {-->
+<!--          console.log("HELLO")-->
+<!--          console.log(this.responseText);-->
+<!--          var data = JSON.parse(this.responseText);-->
+<!--          console.log(data);-->
+<!--        }-->
+<!--        // let data = {username: "john", password: "password"};-->
+
+<!--        // fetch("http://127.0.0.1:3200/login", {-->
+<!--        //   method: "POST", -->
+<!--        //   body: JSON.stringify(data)-->
+<!--        // }).then(res => {-->
+<!--        //   console.log("Request complete! response:", res);-->
+<!--        // });-->
+<!--      }-->
+<!--    </script>-->
+<!--  </body>-->
+<!--</html>-->
