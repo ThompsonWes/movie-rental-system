@@ -1,20 +1,10 @@
 # main.py
 
-from flask import Flask, render_template
-from config import Config
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from db_setup import init_db
+from flask import render_template
+from app import app
+from models import create_db
 
-# create the database
-init_db()
-
-app = Flask(__name__)
-app.config.from_object(Config)
-db = SQLAlchemy(app)
-# migrate = Migrate(app, db)
-
-# create routes for the web app
+create_db()
 
 
 @app.route('/')

@@ -1,6 +1,6 @@
 # models.py
 
-from main import db
+from app import db
 
 # each class will create a table in the database
 
@@ -32,3 +32,9 @@ class CreditCard(db.Model):
 
     def __repr__(self):
         return '<CC {}>'.format(self.body)
+
+
+def create_db():
+    db.create_all()
+
+
