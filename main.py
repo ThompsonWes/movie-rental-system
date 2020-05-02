@@ -1,6 +1,7 @@
 # main.py
 
-from flask import render_template
+from flask import render_template, request
+from flask_cors import CORS, cross_origin
 from app import app
 from models import create_db
 
@@ -14,6 +15,13 @@ def login():
     Render Login.html
     """
     return render_template('Login.html')
+
+
+@app.route('/', methods=['GET'])
+@cross_origin(allow_headers=['Content-Type'])
+def validate():
+
+    return None
 
 
 @app.route('/test')
