@@ -1,81 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="static/stylesheets/styles.css">
-  <script defer src="static/JS/Login.js"></script>
-
+<meta charset="utf-8">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../static/stylesheets/NavBar.css" rel="stylesheet" type="text/css">
+<link href="../static/stylesheets/reset.css" rel="stylesheet" type="text/css">
+<link href="../static/stylesheets/LoginStylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	
+		<!--Container for logo-->
+	<div class="logoContainer">
+		<h1>Cinematic</h1>
+	</div> <!--End logo container-->
+	
+	<!--Nav bar-->
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-bookmark"></i> Movies</a> 
+  <a href="#"><i class="fa fa-fw fa-fire"></i> Trending</a> 
+  <a href="Login.html"><i class="fa fa-fw fa-users"></i> Login</a>
+  <a href="#"><i class="fa fa-fw fa-sign-in"></i> SignUp</a>
+  <a href="#"><i class="fa fa-fw fa-user-circle"></i> Account</a>
+  <a href="#"><i class="fa fa-fw fa-cart-plus"></i> Checkout</a>
 
-    <!--Main container to center everything-->
-    <main id="main_holder">
 
-        <!--Header-->
-        <h1 id="login_header">Login</h1>
+	<!--Search bar-->
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." id="searchBar"name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> <!--End nav bar -->
+	
+<!--Login Form-->
+	<h2>Login Form</h2>
+<!--Form start-->
+<form action="/action_page.php" method="post">
+	  
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="userContainer" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="pswContainer" placeholder="Enter Password" name="psw" required>
         
-        <!--Error message container-->
-        <div id="login_error_msg_container">
+    <button id="LoginBtn" type="submit">Login</button>
+  </div> <!--End container-->
 
-            <!--Displays error message for incorrect username/password-->
-          <p id="login_error_msg">Invalid username <span id="error_msg_second_line">and/or password</span></p>
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="signUp">Sign <a href="SignUp.html">Up</a></span>
+  </div> <!--End container-->
+</form>
 
-        </div> <!--End error msg container-->
-        
-        <!--Start of Login form-->
-        <form id="login_form">
-
-          <!--Username Container-->
-          <input type="text" name="username" id="username_field" class="login_form_field" placeholder="Username">
-
-          <!--Password container-->
-          <input type="password" name="password" id="password_field" class="login_form_field" placeholder="Password">
-
-          <!--Submit button-->
-          <input type="submit" value="Login" id="login_form_submit">
-        </form>
-      
-      </main> <!--End main container-->
+	
+	
 </body>
-
 </html>
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--  <head>-->
-<!--    <title>login</title>-->
-<!--  </head>-->
-<!--  <body>-->
-<!--    <h1>Login</h1>-->
-<!--    <button type="button" onclick="sendRequest()">Submit</button>-->
-<!--    <script>-->
-<!--      function sendRequest() {-->
-<!--        const Http = new XMLHttpRequest();-->
-<!--        Http.open("POST", "http://127.0.0.1:3200/login", true);-->
-<!--        Http.setRequestHeader('Content-Type', 'application/json');-->
-<!--        Http.send(JSON.stringify({-->
-<!--          "username": "john",-->
-<!--          "password": "password"-->
-<!--        }));-->
-
-<!--        Http.onload = function() {-->
-<!--          console.log("HELLO")-->
-<!--          console.log(this.responseText);-->
-<!--          var data = JSON.parse(this.responseText);-->
-<!--          console.log(data);-->
-<!--        }-->
-<!--        // let data = {username: "john", password: "password"};-->
-
-<!--        // fetch("http://127.0.0.1:3200/login", {-->
-<!--        //   method: "POST", -->
-<!--        //   body: JSON.stringify(data)-->
-<!--        // }).then(res => {-->
-<!--        //   console.log("Request complete! response:", res);-->
-<!--        // });-->
-<!--      }-->
-<!--    </script>-->
-<!--  </body>-->
-<!--</html>-->
