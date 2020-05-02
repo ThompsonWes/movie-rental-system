@@ -1,0 +1,8 @@
+@charset "utf-8";
+.logoContainer {
+    width: 100%;
+    display: inline;
+    text-align: center;
+    font-size: 300%;
+    padding-bottom: 0px;
+}
