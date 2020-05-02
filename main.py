@@ -1,11 +1,12 @@
 # main.py
 
-from flask import render_template, request
+from flask import render_template, request, make_response
 from flask_cors import CORS, cross_origin
-from app import app
-from models import create_db
+from app import app, db
+from models import User
+import datetime
 
-create_db()
+db.create_all()
 
 
 @app.route('/')
@@ -24,14 +25,16 @@ def validate():
     return None
 
 
-@app.route('/test')
-def test():
-    return render_template('test.html')
-
-
-@app.route('/home')
-def home():
-    return render_template('home.html')
+@app.route('/createUser', methods=['GET'])
+def create_user():
+    username = 'funkjo'
+    password = 'password'
+    email = 'funkjo@my.easternct.edu'
+    dob = datetime.datetime(1998, 9, 12)
+    new_user = User(username=username, email=email, password_hash=password, dob=dob)
+    db.session.add(new_user)
+    db.session.commit()
+    return make_response(f"{new_user} successfully created!")
 
 
 if __name__ == '__main__':
