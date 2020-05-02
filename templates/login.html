@@ -1,9 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>login</title>
-  </head>
-  <body>
-    <h1>Login</h1>
-  </body>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../static/stylesheets/NavBar.css" rel="stylesheet" type="text/css">
+<link href="../static/stylesheets/reset.css" rel="stylesheet" type="text/css">
+<link href="../static/stylesheets/LoginStylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+		<!--Container for logo-->
+	<div class="logoContainer">
+		<h1>Cinematic</h1>
+	</div> <!--End logo container-->
+	
+	<!--Nav bar-->
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-bookmark"></i> Movies</a> 
+  <a href="#"><i class="fa fa-fw fa-fire"></i> Trending</a> 
+  <a href="Login.html"><i class="fa fa-fw fa-users"></i> Login</a>
+  <a href="#"><i class="fa fa-fw fa-sign-in"></i> SignUp</a>
+  <a href="#"><i class="fa fa-fw fa-user-circle"></i> Account</a>
+  <a href="#"><i class="fa fa-fw fa-cart-plus"></i> Checkout</a>
+
+
+	<!--Search bar-->
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." id="searchBar"name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> <!--End nav bar -->
+	
+<!--Login Form-->
+	<h2>Login Form</h2>
+<!--Form start-->
+<form action="/action_page.php" method="post">
+	  
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="userContainer" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="pswContainer" placeholder="Enter Password" name="psw" required>
+        
+    <button id="LoginBtn" type="submit">Login</button>
+  </div> <!--End container-->
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="signUp">Sign <a href="SignUp.html">Up</a></span>
+  </div> <!--End container-->
+</form>
+
+	
+	
+</body>
 </html>
