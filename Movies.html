@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Movies</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="static/stylesheets/NavBar.css" rel="stylesheet" type="text/css">
+<link href="static/stylesheets/reset.css" rel="stylesheet" type="text/css">
+<link href="static/stylesheets/SignUpStylesheet.css" rel="stylesheet" type="text/css">
+<link href="newGallery.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+			<!--Container for logo-->
+	<div class="logoContainer">
+		<h1>Cinematic</h1>
+	</div> <!--End logo container-->
+	
+	<!--Nav bar-->
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-bookmark"></i> Movies</a> 
+  <a href="Login.html"><i class="fa fa-fw fa-users"></i> Login</a>
+  <a href="#"><i class="fa fa-fw fa-sign-in"></i> SignUp</a>
+  <a href="#"><i class="fa fa-fw fa-cart-plus"></i> Checkout</a>
+
+
+	<!--Search bar-->
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." id="searchBar"name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> <!--End nav bar -->
+	
+	
+	<h2>Movies</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Fantasy')"> Fantasy</button>
+  <button class="btn" onclick="filterSelection('Horror')"> Horror</button>
+  <button class="btn" onclick="filterSelection('Action')"> Action</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Fantasy">
+    <div class="content">
+      <img src="static/Images/starWars.jpg" alt="StarWars" style="width:100%">
+	  <h4>Star Wars: Revenge of the Sith</h4>
+      <p>Rent: $5.99</p>
+    </div>
+  </div>
+  <div class="column Fantasy">
+    <div class="Fantasy">
+      <img src="static/Images/potter.jpg" alt="potter" style="width:100%">
+	  <h4>The Lord Of The Rings: The Two Towers</h4>
+      <p>Rent: $8.99</p>
+    </div>
+  </div>
+  
+
+  <div class="column Horror">
+    <div class="content">
+      <img src="static/Images/hill.jpg" alt="hill" style="width:100%">
+	  <h4>Silent Hill</h4>
+      <p>Rent: $10.99</p>
+    </div>
+  </div>
+	
+  <div class="column Horror">
+    <div class="content">
+      <img src="static/Images/platform.jpg" alt="platform" style="width:100%">
+	  <h4>The Platform</h4>
+      <p>Rent: $11.99</p>
+    </div>
+  </div>
+
+  <div class="column Action">
+    <div class="content">
+      <img src="static/Images/Rush.jpg" alt="Rush" style="width:100%">
+	  <h4>Rush Hour 3</h4>
+      <p>Rent: $8.99</p>
+    </div>
+  </div>
+  <div class="column Action">
+    <div class="content">
+      <img src="static/Images/endgame.jpg" alt="endgame" style="width:100%">
+	  <h4>Endgame</h4>
+      <p>$12.99</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!--Javascript folder--><script type="text/javascript" src="static/JS/menuGallery.js"></script>
+</body>
+</html>
