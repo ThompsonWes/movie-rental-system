@@ -83,3 +83,16 @@ h4 {
   background-color: #666;
    color: white;
 }
+
+/* rent button */
+.rentBtn {
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}
+
+.rent {color: green;}
