@@ -1,0 +1,93 @@
+#checkout {
+
+	background-color:#555;
+	padding: 10px;
+}
+
+#checkout h1 {
+	font-size: 40px;
+	font-family: "Gotham", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#checkout h2 {
+	font-size: 20px;
+	font-family: "Gotham", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	text-align: left;
+	padding-left: 20px;
+	color: #FFFFFF;
+}
+
+#checkout ol li {
+	font-size: 16px;
+	color: #FFFFFF;
+	font-family: "Gotham", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";	
+	padding-top: 10px;
+}
+
+#checkout label {
+	padding-left: 20px;
+	color: #FFFFFF;
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 75%;
+	text-align: left;
+}
+
+#checkout input[type]{
+  padding-left: 20px;
+  display: inline-block;
+  float: left;	
+  width: 25%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+#payment {
+	background-color:#555;
+	padding: 10px;
+}
+
+#payment h1 {
+	font-size: 20px;
+	font-family: "Gotham", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	text-align: left;
+	padding-left: 20px;
+	color: #FFFFFF;
+}
+
+#payment label {
+	color: #FFFFFF;
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 75%;
+	text-align: left;
+}
+
+#payment input[type] {
+  display: inline-block;
+  float: left;	
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+ .registerbtn {
+	font-size: 20px;
+    background-color: #F1F713;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
