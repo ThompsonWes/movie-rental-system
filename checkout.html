@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+  <link rel="stylesheet" href="CSS/home.css">
+	<link href="CSS/checkout.css" rel="stylesheet" type="text/css">
+	<link href="CSS/NavBar.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="Home.js"></script>
+</head>
+
+<body>
+<!-- Logo Image -->
+<img src="logo.png" width="1000" height="500" alt="" class="img"/>
+<!-- Navigation bar -->	
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-bookmark"></i> Movies</a> 
+  <a href="#"><i class="fa fa-fw fa-fire"></i> Trending</a> 
+  <a href="Login.html"><i class="fa fa-fw fa-users"></i> Login</a>
+  <a href="#"><i class="fa fa-fw fa-sign-in"></i> SignUp</a>
+  <a href="#"><i class="fa fa-fw fa-user-circle"></i> Account</a>
+  <a href="#"><i class="fa fa-fw fa-cart-plus"></i> Checkout</a>
+
+
+	<!--Search bar-->
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." id="searchBar" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> <!--End nav bar -->
+	<br>
+	<br>
+	<br>
+<div id="checkout">
+
+	 <h1> Checkout </h1>
+	 <br>
+	<h2> Your cart: </h2>
+  <ol> 
+		<li> Avengers: Endgame - $12.99 </li>
+		<li> Star Wars: Revenge of the Sith - $6.99 </li>
+	</ol>
+	
+	<label for="total"> Total:<br>
+	</label> 
+	<input type="textbox" name="output">
+	<br>
+	<br>
+	<br>
+	<br>
+	
+</div>
+<br>
+<div id="payment">
+  <h1>Billing Info</h1>
+	
+	<label for="name"><b>Name on Card:</b></label>
+    <input type="text" id="name" placeholder="ex: John Doe" name="name" required>
+	<br>
+  <label for="address"><b>Street Address:</b></label>
+  <input type="text" id="address" placeholder="ex: 111 Lake Street" name="address" required>
+	<br>
+  <label for="state"><b>State: </b></label>
+  <input type="text" id="state" placeholder="ex: CT" name="state" required>
+	<br>
+  <label for="zip"><b>Zip Code: </b></label>
+  <input type="text" id="zip" placeholder="ex: 001122" name="zip" maxlength="5" required>
+	<br>
+  <label for="credit-card"><b>Credit Card Number: </b></label>
+  <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+	<br>
+  <label for="expiration"><b>Expiration Date: </b></label>
+  <input id="expiration" type="tel" inputmode="numeric" autocomplete="expiration-num" maxlength="3" placeholder="ex: 01/01/2000">
+	<br>
+  <label for="security"><b>Security Code: </b></label>
+  <input type="text" id="security" placeholder="ex: 123" name="security" maxlength="3" required>
+	<br>
+<button type="submit" class="registerbtn" onClick="order-success.html">Checkout</button>
+</div>	
+
+</body>
+</html>
